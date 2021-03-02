@@ -33,7 +33,7 @@ One album is indeed performed by an artist and produced by a label (debatable :)
 - CRUD Album
   - the Create is **provided** but select/option displaying artists and label are **missing**
   - the Read is **provided**
-  - code the Update form + route
+  - code the Update form + routes
   - code the Delete route
 
 - **BONUS Artist**
