@@ -1,0 +1,48 @@
+<h1 class="title">
+    <span>All labels</span>
+    <a href="/dashboard/label/create" class="link label"><i class="fa fa-plus"></i></a>
+</h1>
+<hr>
+
+{{#unless labels.length}}
+<p>
+    sorry, no labels available yet.
+</p>
+{{else}}
+<table class="table">
+    <thead class="head">
+        <th class="cell">logo</th>
+        <th class="cell">name</th>
+        <th class="cell">country</th>
+        <th class="cell">city</th>
+        <th class="cell">street</th>
+        <th class="cell">street num</th>
+        <th class="cell">zip</th>
+        <th class="cell">update</th>
+        <th class="cell">delete</th>
+    </thead>
+
+    <tbody class="body">
+        {{#each labels}}
+        <tr class="row">
+            <td class="cell logo" style="background-image: url({{logo}})"></td>
+            <td class="cell name">{{name}}</td>
+            <td class="cell country">{{country}}</td>
+            <td class="cell city">{{city}}</td>
+            <td class="cell band">{{street}}</td>
+            <td class="cell band">{{streetNumber}}</td>
+            <td class="cell band">{{zipcode}}</td>
+            <td class="cell band">
+                <a href="/dashboard/label/update/{{_id}}">
+                    <i class="fa fa-pen"></i>
+                </a>
+            </td>
+            <td class="cell band">
+                <a href="/dashboard/label/delete/{{_id}}">
+                    <i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{/unless}}

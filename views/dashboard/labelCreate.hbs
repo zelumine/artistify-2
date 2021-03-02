@@ -1,0 +1,21 @@
+<form method="post" action="/dashboard/label/create" enctype="multipart/form-data"  class="form">
+    <h1 class="title">Add a new label</h1>
+    <label class="label" for="name">label name</label>
+    <input class="input" id="name" type="text" value="fake label" name="name">
+    <label class="label" for="city">city</label>
+    <input class="input" id="city" type="text" value="fake city" name="city">
+    <label class="label" for="country">country</label>
+    <input class="input" id="country" type="text" value="fake country" name="country">
+    <label class="label" for="street">street</label>
+    <input class="input" id="street" type="text" value="fake street" name="street">
+    <label class="label" for="street-number">street number</label>
+    <input class="input" id="street-number" type="number" value="123" name="streetNumber">
+    <label class="label" for="zipcode">zipcode</label>
+    <input class="input" id="zipcode" type="text" value="75018" name="zipcode">
+    <label class="label" for="logo">
+        <span>label's logo</span>
+        <i class="icon fas fa-cloud-upload-alt fa-2x"></i>
+    </label>
+    <input class="is-hidden" id="logo" type="file" name="logo">
+    <button class="btn">create</button>
+</form>

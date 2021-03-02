@@ -1,0 +1,39 @@
+<h1 class="title">
+    <span>All artists</span>
+    <a href="/dashboard/artist/create" class="link artist"><i class="fa fa-plus"></i></a>
+</h1>
+<hr>
+
+{{#unless artists.length}}
+<p>sorry, no artists yet</p>
+{{else}}
+<table class="table">
+    <thead class="head">
+        <th class="cell">picture</th>
+        <th class="cell">name</th>
+        <th class="cell">description</th>
+        <th class="cell">band</th>
+        <th class="cell">update</th>
+        <th class="cell">delete</th>
+    </thead>
+    <tbody class="body">
+        {{#each artists}}
+        <tr class="row">
+            <td class="cell picture" style="background-image: url({{picture}})"></td>
+            <td class="cell name">{{name}}</td>
+            <td class="cell desc">{{description}}</td>
+            <td class="cell band">{{isBand}}</td>
+            <td class="cell band">
+                <a href="/dashboard/artist/update/{{_id}}">
+                    <i class="fa fa-pen"></i>
+                </a>
+            </td>
+            <td class="cell band">
+                <a href="/dashboard/artist/delete/{{_id}}">
+                    <i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{/unless}}

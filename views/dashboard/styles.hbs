@@ -1,0 +1,64 @@
+<h1 class="title">
+    <span>All styles</span>
+    <a href="/dashboard/style/create" class="link style"><i class="fa fa-plus"></i></a>
+</h1>
+<hr>
+{{!-- <button id="btn-fetch-styles">fetch styles</button>
+<button id="btn-display-form-style">post style</button>
+
+
+<span id="form-post-style" class="form row is-hidden">
+    <input id="new-style-name" class="input" type="text">
+    <input id="new-style-color" class="input" type="color">
+    <button id="btn-post-style" class="btn">create</button>
+</span>
+
+<span id="form-edit-style" class="form row">
+    <input id="update-style-name" class="input" type="text">
+    <input id="update-style-color" class="input" type="color">
+    <button id="btn-update-style" class="btn">update</button>
+</span> --}}
+
+{{!--
+<hr> --}}
+
+
+{{#unless styles.length}}
+<p>
+    sorry, no styles available yet.
+</p>
+{{else}}
+<table class="table">
+    <thead class="head">
+        <th class="cell">color</th>
+        <th class="cell">name</th>
+        <th class="cell">wiki</th>
+        <th class="cell">update</th>
+        <th class="cell">delete</th>
+    </thead>
+    <tbody class="body">
+        {{#each styles}}
+        <tr class="row">
+            <td class="cell color">
+                <div class="box" style="background: {{color}}"></div>
+            </td>
+            <td class="cell name">{{name}}</td>
+            <td class="cell wiki">
+                <a href="{{wikiURL}}" target="_blank">
+                    <i class="fa fa-link"></i>
+                </a>
+            </td>
+            <td class="cell band">
+                <a href="/dashboard/style/update/{{_id}}">
+                    <i class="fa fa-pen"></i>
+                </a>
+            </td>
+            <td class="cell band">
+                <a href="/dashboard/style/delete/{{_id}}">
+                    <i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{/unless}}

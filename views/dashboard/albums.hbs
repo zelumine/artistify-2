@@ -1,0 +1,41 @@
+<h1 class="title">
+    <span>All albums</span>
+    <a href="/dashboard/album/create" class="link album"><i class="fa fa-plus"></i></a>
+</h1>
+<hr>
+{{#unless albums.length}}
+<p>sorry, no albums yet</p>
+{{else}}
+<table class="table">
+    <thead class="head">
+        <th class="cell">cover</th>
+        <th class="cell">title</th>
+        <th class="cell">artist</th>
+        <th class="cell">label</th>
+        <th class="cell">released</th>
+        <th class="cell">update</th>
+        <th class="cell">delete</th>
+    </thead>
+    <tbody class="body">
+        {{#each albums}}
+        <tr class="row">
+            <td class="cell picture" style="background-image: url({{cover}})"></td>
+            <td class="cell name">{{title}}</td>
+            <td class="cell desc">{{artist.name}}</td>
+            <td class="cell desc">{{label.name}}</td>
+            <td class="cell desc">{{formatDate album.releaseDate}}</td>
+            <td class="cell band">
+                <a href="/dashboard/album/update/{{_id}}">
+                    <i class="fa fa-pen"></i>
+                </a>
+            </td>
+            <td class="cell band">
+                <a href="/dashboard/album/delete/{{_id}}">
+                    <i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{/unless}}

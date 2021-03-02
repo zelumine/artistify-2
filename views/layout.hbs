@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Artistify</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/stylesheets/mod.form.css' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+  {{!-- <header id="header-main">
+    <span id="logo-main">
+      <a href="/">Artistify</a>
+    </span>
+    <nav>
+      <a href="/" class="link">home</a> |
+      <a href="/all-albums" class="link">all albums</a>
+      {{#unless isLoggedIn}}
+      <a href="/auth/signin" class="link">| <i class="fa fa-user fa-1x"></i></a>
+      {{/unless}}
+      {{#if isLoggedIn}}
+      <a class="link" href="/dashboard">| <i class="fa fa-user fa-1x"></i></a>
+      <a class="link" href="/auth/signout">signout</a>
+      {{/if}}
+    </nav>
+  </header> --}}
+
+  <header id="header-main">
+    <span id="logo-main">
+      <a href="/">Artistify</a>
+    </span>
+    <nav>
+      <a href="/" class="link">home</a> |
+      <a href="/artist" class="link">artists</a> |
+      <a href="/album" class="link">albums</a> |
+      <a href="/dashboard" class="link"><i class="fa fa-user fa-1x"></i></a>
+    </nav>
+  </header>
+
+{{!-- 
+  <form id="search-bar" method="get" action="/search" class="form">
+    <input class="input" type="text" placeholder="search" name="search">
+    <button class="btn">
+      <i class="fa fa-search"></i>
+    </button>
+  </form> --}}
+
+  <main id="content-main">
+    {{> flashMessage }}
+
+    {{{body}}}
+  </main>
+</body>
+
+</html>

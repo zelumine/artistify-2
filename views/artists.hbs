@@ -1,0 +1,11 @@
+<h1>All artists</h1>
+
+<div class="cards">
+    {{#each artists}}
+    <div class="card artist" style="background-image: url({{picture}}">
+        <a href="/artist/{{_id}}">
+            {{name}}
+        </a>
+    </div>
+    {{/each}}
+</div>
