@@ -19,6 +19,8 @@ We will introduce a new model : Album.
 It's an interesting one since it's linked to 2 other models : Artist and Label.  
 One album is indeed performed by an artist and produced by a label (debatable :)
 
+**Advice** : read this doc entirely before starting !  
+
 **Don't worry** if you can't finish all the steps : you will get a soluce proposal.
 
 **Do your best : Happy hacking !**
